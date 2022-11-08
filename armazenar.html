@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvando os dados no navegador</title>
+  </head>
+  <body>
+    <h3>Salvando os dados no navegador</h3>
+    <label>Informe do dado</label>
+    <input id ="dado"><br>
+    <button type="button" onclick="salvar()">Salvar</button>
+    <button type="button" onclick="carregar()">Carregar</button>
+  <script>
+    function salvar(){
+        localStorage.info = document.getElementById("dado").value;
+        document.getElementById("dado").value =''
+    }
+
+    function carregar(){
+       if (localStorage.info){
+        document.getElementById("dado").value = localStorage.info;
+
+       }
+        
+    }
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        body {
+            background: #c9d4e0;
+        }
+
+        @media (min-width: 500px) {
+            body {
+                /*display: inline-block;*/
+                background: #c50808;
+
+            }
+
+            .cardArea {
+                display: flex;
+                justify-content: left;
+                
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: #a9a9f6;
+            }
+
+            .cardArea {
+                display: inherit;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                
+            }
+        }
+
+        @media print {
+            body {
+                background-color: #f8a3f8;
+            }
+
+            .cardArea {
+                display: inherit;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                
+            }
+        }
+
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 #100f0f;
+        }
+
+        .tittle {
+            width: 100%;
+            margin-top: 5vh;
+            font-weight: bold;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            text-align: justify;
+            margin: 5vh 5vh 5vh 5vh;
+        }
+
+        #background1 {
+            background: cornflowerblue;
+            margin: 2rem 2rem 2rem 2rem;
+            border-radius: 15px;
+
+        }
+
+        #background2 {
+            background: yellow;
+            margin: 2rem 2rem 2rem 2rem;
+            border-radius: 15px;
+
+        }
+
+        #background3 {
+            background: #79d751;
+            margin: 2rem 2rem 2rem 2rem;
+            border-radius: 15px;
+        }
+
+        .menu {
+            text-align: center;
+            padding-inline: 75px;
+            
+
+        }
+        #buttonOne:hover{
+            color: #0022ff;
+            font-weight: bold;
+        }
+        #buttonTwo:hover{
+            color: #0022ff;
+            font-weight: bold;
+        }
+        #buttonThree:hover{
+            color: #0022ff;
+            font-weight: bold;
+        }
+
+        a {
+            color: inherit;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 15px;
+        }
+    hr{
+        border: 2;
+        
+    }
+    </style>
+</head>
+<body>
+
+
+<h2><center>EXERCÍCIOS MEDIA QUERIES</center></h2>
+<div class="menu">
+    <div class="test">
+        <a href="#background3" id="button1">Card 1</a>
+        <a href="#background3" id="button2">Card 2</a>
+        <a href="#background3" id="button3">Card 3</a>
+
+    </div>
+</div>
+<hr>
+<div class="cardArea">
+
+    <div class="card" id="background1">
+        <div class="tittle">
+            <header>
+                Card 1
+            </header>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar tempor est a posuere. Sed id
+                metus faucibus risus blandit fringilla id et lorem. Fusce euismod semper lorem, vitae dignissim magna
+                efficitur vel. Sed sed aliquam nisl. Ut non odio euismod, aliquet risus ut, ultricies nisi. Duis congue
+                lacinia sem at pulvinar.
+            </p>
+        </div>
+    </div>
+
+    <div class="card" id="background2">
+        <div class="tittle">
+            <header>
+                Card 2
+            </header>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar tempor est a posuere. Sed id
+                metus faucibus risus blandit fringilla id et lorem. Fusce euismod semper lorem, vitae dignissim magna
+                efficitur vel. Sed sed aliquam nisl. Ut non odio euismod, aliquet risus ut, ultricies nisi. Duis congue
+                lacinia sem at pulvinar.
+            </p>
+        </div>
+    </div>
+    <div class="card" id="background3">
+        <div class="tittle">
+            <header>
+                Card 3
+            </header>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar tempor est a posuere. Sed id
+                metus faucibus risus blandit fringilla id et lorem. Fusce euismod semper lorem, vitae dignissim magna
+                efficitur vel. Sed sed aliquam nisl. Ut non odio euismod, aliquet risus ut, ultricies nisi. Duis congue
+                lacinia sem at pulvinar.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

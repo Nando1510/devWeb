@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #181f27;
+        }
+        .box{
+            color: white;
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 23%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white; 
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position:absolute;
+            top: 77px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+
+        }
+        .labelInput2{
+            position:absolute;
+            top: 115px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+        }
+        .labelInput3{
+            position:absolute;
+            top: 155px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+        }
+        .labelInput4{
+            position:absolute;
+            top: 338px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+        }
+        .labelInput5{
+            position:absolute;
+            top: 376px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+        }
+        .labelInput6{
+            position:absolute;
+            top: 413px;
+            left: 30px;
+            pointer-events: none;
+            transition: .5;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: 65px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput2,
+        .inputUser:valid ~ .labelInput2{
+            top: 100px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput3,
+        .inputUser:valid ~ .labelInput3{
+            top: 135px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput3,
+        .inputUser:valid ~ .labelInput3{
+            top: 139px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput4,
+        .inputUser:valid ~ .labelInput4{
+            top: 325px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput5,
+        .inputUser:valid ~ .labelInput5{
+            top: 363px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        .inputUser:focus ~ .labelInput6,
+        .inputUser:valid ~ .labelInput6{
+            top: 401px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 200));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to rigth,rgb(0, 80, 172),rgb(80, 19, 195));
+        }
+
+        a{
+            color: #5568fe;
+            text-decoration: none;
+            margin-left: 70px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class = "box">
+        <form action ="">
+            <fieldset>
+                <legend><b> Formulário de Clientes</b></legend>
+                <br>
+                <div class="inputbox">
+                    <input type = "text" name = "nome" id = "nome" class = "inputUser" required>
+                    <label for="nome" class="labelInput"> Nome completo</label>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <input type = "text" name = "email" id = "email" class = "inputUser" required>
+                    <label for="email" class="labelInput2" > Email</label>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <input type = "tel" name = "telefone" id = "telefone" class = "inputUser" required>
+                    <label for="telefone" class="labelInput3" > Telefone</label>
+                </div>
+                <br>
+                <p>Sexo:</p>
+                <input type = "radio" id="feminino" name="genero" value="feminino" required>
+                <label for ="feminino">Feminino</label>
+                <input type = "radio" id="masculino" name="genero" value="masculino" required>
+                <label for ="masculino">Masculino</label>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for ="outro">Outro</label>
+                <br><br>
+                <div class="inputbox">
+                    <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput4" > Cidade</label>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput5"> Estado</label>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="cidade" class="labelInput6" > Endereço</label>
+                </div>
+                <br>
+                <input type="submit" name="submit" id="submit">
+                <p><a href = "pos_login.html">Voltar a página inicial</a></p>
+                
+
+            </fieldset>
+            
+        </form>
+       
+    </div>
+     
+</body>
+</html>

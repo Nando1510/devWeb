@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Exercício - UNILASALLE</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+           
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            background-color:rgb(21, 4, 98);
+            padding:10px;
+        }
+        .btn-abrir{
+            color: white;
+            font-size: 25px;
+        }
+        nav{
+            height: 100%;
+            width: 0px;
+            background-color:rgb(21, 4, 98);
+            position:fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            transition: width 0.3s;
+            
+        }
+        nav a{
+            color: white;
+            font-size: 15px;
+            display: block;
+            padding: 12px 10px 12px 32px;
+        }
+        nav a:hover {
+            color:rgb(21, 4, 98);
+            background-color: white ;
+        }
+        main{
+            padding: 10px;
+            transition: margin-left 0.5s;
+            background-color: white;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776;  Abrir</a>
+    </header>
+    <nav id="menu">
+        <a href="#" onclick="fecharMenu()">&times; Fechar </a>
+        <a href="cadastrar_funcionario.html">Cadastro de funcionários</a>
+        <a href="formulario.html">Cadastro de clientes</a>
+        <a href="controle.html">Cadastro / Consulta - Produtos</a>
+        <a href="vendas.html">Vendas</a>
+        <a href="login.html">Sair do Sistema</a>
+        
+    </nav>
+    <main id="conteudo">
+        <h1>FERRAGEM SAPUCAIA</h1>
+        <p>Clique no menu abrir e em seguida em um linck ao lado esquerdo para visualisar a resposta do conteúdo...</p>
+        <img src="C:\Users\usuario\Desktop\Lasalle\TERCEIRO SEMESTRE\WEB\projeto\ferragem.png">
+    </main>
+    
+    
+      
+    <script>
+        function abrirMenu() {
+            document.getElementById("menu").style.width = "250px";
+            document.getElementById("conteudo").style.marginLeft = "250px";
+        }
+        function fecharMenu() {
+            document.getElementById("menu").style.width = "0px";
+            document.getElementById("conteudo").style.marginLeft = "0px";
+        }
+        
+    </script>
+</body>
+</html>
